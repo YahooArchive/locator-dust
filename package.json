@@ -8,6 +8,10 @@
         "dustjs-linkedin": "*"
     },
     "main": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.yahoo.com/modown/modown-dust"
+    },
     "keywords": [
         "framework",
         "yui",
