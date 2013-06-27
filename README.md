@@ -72,8 +72,8 @@ _note: in the near future, `Y.Template.render()` will be the formal API instead 
 TODO
 ----
 
-* [ ] Add `partials` support.
-* [ ] Add `helpers` rehydration.
+* Add `partials` support.
+* Add `helpers` rehydration.
 
 
 License
