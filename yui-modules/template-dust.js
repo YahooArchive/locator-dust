@@ -1,13 +1,16 @@
-YUI.add('template-dust', function (Y, NAME) {
+YUI.add('template-dust', function (Y) {
 
-    var dust = Y.config.global.dust;
+    'use strict';
+
+    // var dust = Y.config.global.dust;
 
     Y.Template.Dust = {
         revive: function (fn) {
             return function (data) {
                 // TODO: implement this
+                return fn(data);
             };
         }
     };
 
-}, '', {requires: ['template-base', 'dust']});
+}, '', {requires: ['template-base'], optional: ['dust']});

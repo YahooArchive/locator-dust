@@ -5,7 +5,11 @@
             "prependfiles": ["../../node_modules/dustjs-linkedin/lib/dust.js"],
             "jsfiles": ["js/noop.js"],
             "config": {
-                "affinity": "client"
+                "affinity": "client",
+                "condition": {
+                    "name": "dust",
+                    "trigger": "template-dust"
+                }
             }
         }
     }
