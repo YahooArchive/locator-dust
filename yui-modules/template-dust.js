@@ -1,20 +1,13 @@
 YUI.add('template-dust', function (Y, NAME) {
 
-    /*var dust = Y.config.global.dust;
+    var dust = Y.config.global.dust;
 
-    Dust.revive = Dust.revive || function (fn) {
-        return function (data) {
-            var fragment = !node && document.createDocumentFragment(),
-                component = React.createClass({
-                    render: fn
-                }),
-                instance = component();
-
-            // mixing in the template data
-            Y.mix(instance.props, data, true);
-            React.renderComponent(instance, fragment);
-            return !node && fragment.innerHTML;
-        };
-    };*/
+    Y.Template.Dust = {
+        revive: function (fn) {
+            return function (data) {
+                // TODO: implement this
+            };
+        }
+    };
 
 }, '', {requires: ['template-base', 'dust']});
