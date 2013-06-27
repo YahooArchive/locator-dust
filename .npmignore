@@ -2,3 +2,4 @@ tests
 *.log
 artifacts
 coverage
+example
