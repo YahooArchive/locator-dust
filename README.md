@@ -3,9 +3,7 @@ locator-dust
 
 Dust template compiler for locator.
 
-
-[![Build Status](https://travis-ci.org/yahoo/locator-dust.png?branch=master)][Build Status]
-
+[![Build Status](https://travis-ci.org/yahoo/locator-dust.png?branch=master)](https://travis-ci.org/yahoo/locator-dust)
 
 This component is a result of the integration between [YUI][] and [Locator][] component from Yahoo! to compile [Dust][]' templates into [YUI][] Modules that could be used on the server thru express and on the client thru [YAF][].
 
