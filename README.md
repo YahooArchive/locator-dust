@@ -54,21 +54,41 @@ https://github.com/yahoo/locator-dust/tree/master/example
 
 ### Client side with `yui`
 
-On the client side, any [Handlebars][] template will be accessible as well thru `yui` as a regular yui module. Here is an example:
+On the client side, any [Dust][] template will be accessible as well thru `yui` as a regular yui module. Here is an example:
 
 ```
 app.yui.use('<name-of-app>-templates-bar', function (Y) {
 
-    Y.Template._cache['<name-of-app>/bar']({
+    var html = Y.Template._cache['<name-of-app>/bar']({
         tagline: 'testing with some data for template bar'
-    }, Y.one('#container'));
+    });
 
 });
 ```
 
-In the example above, the `<name-of-app>` is the name specified in the `package.json` for your express application, and the template `bar.dust` will be rendered under the `#container` selector.
+In the example above, the `<package-name>` is the package name specified in the `package.json` for the npm package that contains the template, which is usually the express application. `bar` comes from `bar.dust` where the filename is used as the name to register the template under `Y.Template`. By using the yui module name, you will be able to invoke the render action to produce a html fragment.
 
 _note: in the near future, `Y.Template.render()` will be the formal API instead of using the `_cache` object, which is protected._
+
+### Custom template name
+
+If you want to use a different template name, you can write your own parser:
+
+```
+// using locator-dust yui plugin
+loc.plug(LocatorDust.yui({
+    nameParser: function (source_path) {
+        var libpath = require('path'),
+            name = libpath.basename(source_path, libpath.extname(source_path));
+        if (source_path.indexOf('partials') > 0) {
+            name += '-partial';
+        }
+        return name;
+    }
+}));
+```
+
+In the example above, when trying to parse `/path/to/foo.dust` it will return `foo`, but when trying to `/path/to/partials/bar.dust` it will return `foo-partial`, that will avoid collisions while giving you full control over the name resolution for the compiled templates.
 
 
 TODO
