@@ -1,7 +1,7 @@
 Locator Dust Change History
 ===========================
 
-@next (@date)
+0.2.0 (2013-07-17)
 ------------------
 
 * no more partials, just templates. partials are just regular templates
