@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>locator-dust demo</title>
+
+</head>
+<body>
+
+    <h1>template `bar` rendered at the server side: </h1>
+
+    <div id="barserver">{outlet|s}</div>
+
+    <div>{>abc /}</div>
+
+    <h1>template `bar` rendered at the client side: </h1>
+
+    <div id="barclient">waiting...</div>
+
+    <div>{>def /}</div>
+
+    <script>{state|s}</script>
+    <script>
+    app.yui.use('node', 'demo-templates-bar', function (Y) {
+        var fooContent = Y.Template._cache['demo/bar']({
+            tagline: 'bar template rendered from client side',
+            bundle: 'demo'
+        });
+        Y.one('#barclient').setContent(fooContent);
+    });
+    </script>
+
+</body>
+</html>
