@@ -10,21 +10,32 @@
 "use strict";
 
 
-var libpath = require('path'),
-    libfs = require('fs'),
-    mockery = require('mockery'),
-    expect = require('chai').expect,
-    plugin = require('../../lib/plugin.js');
+var expect = require('chai').expect,
+    index = require('../../lib/index.js');
 
 describe('plugin', function () {
 
-    describe('instance', function () {
+    describe('index', function () {
 
-        // we nee to write some tests here!
-        it('extensions', function () {
-            expect(plugin.describe.extensions[0]).to.equal('dust');
+        it('extend', function () {
+            var a = {
+                foo: 'bar',
+                extensions: 'baz',
+                nameParser: 'test'
+            },
+                extended = index.yui(a);
+            expect(extended.describe.summary).to.equal('Compile dust templates to yui modules');
+            expect(extended.describe.extensions).to.equal('baz');
+            expect(extended.describe.nameParser).to.equal('test');
+            expect(extended.describe.foo).to.equal('bar');
+        });
+
+        it('extend default instance', function () {
+            var extended = index.yui();
+            expect(extended.describe.summary).to.equal('Compile dust templates to yui modules');
         });
 
     });
+    
 
 });
