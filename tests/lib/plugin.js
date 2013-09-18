@@ -61,7 +61,7 @@ describe('locator-dust', function () {
                 evt = { file: file, bundle: bundle },
                 api = {},
                 filecall = 0;
-            file.fullPath = libpath.join(__dirname, '../fixtures/testnofile.handlebars');
+            file.fullPath = libpath.join(__dirname, '../fixtures/testnofile.dust');
             api.promise = function (fn) {
                 return new libpromise.Promise(fn);
             };
