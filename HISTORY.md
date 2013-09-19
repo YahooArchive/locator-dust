@@ -1,6 +1,11 @@
 Locator Dust Change History
 ===========================
 
+0.2.1 (2013-09-19)
+------------------
+
+* implement regex to identify partials that should be registered as dependencies
+
 0.2.0 (2013-07-17)
 ------------------
 
