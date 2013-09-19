@@ -23,6 +23,7 @@ describe('locator-dust', function () {
             var result = core.partials(fixturesPath + '/layout.dust');
             expect(result[0]).to.equal('abc');
             expect(result[1]).to.equal('def');
+            expect(result.length).to.equal(2);
         });
 
         it('compile', function () {

@@ -20,16 +20,7 @@
 
     <div>{>def /}</div>
 
-    <script>{state|s}</script>
-    <script>
-    app.yui.use('node', 'demo-templates-bar', function (Y) {
-        var fooContent = Y.Template._cache['demo/bar']({
-            tagline: 'bar template rendered from client side',
-            bundle: 'demo'
-        });
-        Y.one('#barclient').setContent(fooContent);
-    });
-    </script>
+    <div>{>"abc/def/ghi" /}</div>
 
 </body>
 </html>

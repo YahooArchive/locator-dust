@@ -5,7 +5,8 @@
     "author": "Caridy Patino <caridy@yahoo-inc.com> (http://github.com/caridy)",
     "contributors": [],
     "dependencies": {
-        "dustjs-linkedin": "~1.2.5"
+        "dustjs-linkedin": "~1.2.5",
+        "debug": "*"
     },
     "main": "index",
     "locator": {
@@ -37,7 +38,7 @@
         "mocha": "*",
         "mockery": "1.4.x",
         "xunit-file": "*",
-        "yui": "~3.11.0"
+        "yui": "3.x"
     },
     "scripts": {
         "lint": "node node_modules/.bin/jshint --config ./node_modules/yui-lint/jshint.json ./lib/*.js ./yui-modules/*.js",
