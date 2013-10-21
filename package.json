@@ -6,6 +6,7 @@
     "contributors": [],
     "dependencies": {
         "dustjs-linkedin": "~1.2.5",
+        "yui": ">=3.12.0",
         "debug": "*"
     },
     "main": "index",
@@ -38,7 +39,7 @@
         "mocha": "*",
         "mockery": "1.4.x",
         "xunit-file": "*",
-        "yui": "3.x"
+        "yui": ">=3.12.0"
     },
     "scripts": {
         "lint": "node node_modules/.bin/jshint --config ./node_modules/yui-lint/jshint.json ./lib/*.js ./yui-modules/*.js",
