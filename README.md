@@ -5,9 +5,9 @@ Dust template compiler for locator.
 
 [![Build Status](https://travis-ci.org/yahoo/locator-dust.png?branch=master)](https://travis-ci.org/yahoo/locator-dust)
 
-This component is a result of the integration between [YUI][] and [Locator][] component from Yahoo! to compile [Dust][]' templates into [YUI][] Modules that could be used on the server thru express and on the client thru [YAF][].
+This component is a result of the integration between [YUI][] and [Locator][] component from Yahoo! to compile [Dust][] templates into [YUI][] Modules that could be used on the server thru express and on the client thru [YAF][].
 
-The beaufy of this is that you will NOT need to download the full `dust` parser component or the template itself, instead you use YUI Loader to load modules that will provision the dust templates in a form of javascript functions ready to be execute to produce a html fragment.
+The beauty of this is that you will NOT need to download the full `dust` parser component or the template itself, instead you use YUI Loader to load modules that will provision the `dust` templates in a form of javascript functions ready to be execute to produce an HTML fragment.
 
 [Dust]: http://linkedin.github.io/dustjs/
 [Locator]: https://github.com/yahoo/locator
@@ -32,7 +32,7 @@ Usage
 
 ### Integration with `locator` on the server side
 
-Normally, you will plug the locator plugin exposed by `locator-dust` into the locator instance, and locator will be able to analyze every file in your express app, and it will compile any `*.dust` into a YUI module that can be used thru `express-yui` for example. The example below describes how to use the yui plugin with locator:
+Normally, you will plug the locator plugin exposed by `locator-dust` into the locator instance, and locator will be able to analyze every file in your express app, and it will compile any `*.dust` into a [YUI][] module that can be used thru `express-yui` for example. The example below describes how to use the yui plugin with locator:
 
 ```
 var Locator = require('locator'),
@@ -54,7 +54,7 @@ https://github.com/yahoo/locator-dust/tree/master/example
 
 ### Client side with `yui`
 
-On the client side, any [Dust][] template will be accessible as well thru `yui` as a regular yui module. Here is an example:
+On the client side, any [Dust][] template will be accessible as well thru `yui` as a regular [YUI][] module. Here is an example:
 
 ```
 app.yui.use('<name-of-app>-templates-bar', function (Y) {
